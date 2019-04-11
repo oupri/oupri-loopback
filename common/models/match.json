@@ -1,0 +1,24 @@
+{
+  "name": "match",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "source": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    },
+    "target": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,31 @@
+{
+  "name": "conversation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "startedAt": {
+      "type": "number"
+    },
+    "endedAt": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "initiatedBy": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    },
+    "acceptedBy": {
+      "type": "belongsTo",
+      "model": "member",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

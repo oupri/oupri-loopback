@@ -1,0 +1,33 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "member": 9,
+    "interest": 1,
+    "conversation": 1,
+    "match": 1
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "member": {
+      "1": "{\"alias\":\"baba\",\"id\":1}",
+      "2": "{\"alias\":\"baba\",\"id\":2}",
+      "3": "{\"alias\":\"Appa Rao\",\"id\":3}",
+      "4": "{\"alias\":\"ddd\",\"id\":4}",
+      "5": "{\"alias\":\"Mugambo\",\"id\":5}",
+      "6": "{\"alias\":\"Appa Rao\",\"id\":6}",
+      "7": "{\"alias\":\"test member\",\"id\":7}",
+      "8": "{\"alias\":\"mugambo\",\"id\":8}"
+    },
+    "interest": {},
+    "conversation": {},
+    "match": {}
+  }
+}

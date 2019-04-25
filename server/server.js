@@ -4,7 +4,8 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
-var settings = require('../settings')
+var settings = require('../assets/settings')
+
 app.neo4j = require('../utils/neo4j.executor')(settings.neo4j.uri, settings.neo4j.username, settings.neo4j.password)
 
 app.start = function () {

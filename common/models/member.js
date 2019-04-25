@@ -1,5 +1,5 @@
 'use strict';
-const createMemberOnGraph = require('../../methods/create.member.on.graph')
+const syncMemberOnCreation = require('../../methods/sync.member.on.creation')
 module.exports = function (Member) {
-  createMemberOnGraph(Member)
+  syncMemberOnCreation(Member)
 }

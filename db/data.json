@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "member": 9,
+    "member": 12,
     "interest": 1,
     "conversation": 1,
     "match": 1
@@ -24,7 +24,10 @@
       "5": "{\"alias\":\"Mugambo\",\"id\":5}",
       "6": "{\"alias\":\"Appa Rao\",\"id\":6}",
       "7": "{\"alias\":\"test member\",\"id\":7}",
-      "8": "{\"alias\":\"mugambo\",\"id\":8}"
+      "8": "{\"alias\":\"mugambo\",\"id\":8}",
+      "9": "{\"alias\":\"Subba Rao\",\"id\":9}",
+      "10": "{\"alias\":\"Subba Rao 1\",\"id\":10}",
+      "11": "{\"alias\":\"Subba Rao 2\",\"id\":11}"
     },
     "interest": {},
     "conversation": {},

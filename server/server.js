@@ -4,10 +4,13 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
+var settings = require('../settings')
+app.neo4j = require('../utils/neo4j.executor')(settings.neo4j.uri, settings.neo4j.username, settings.neo4j.password)
 
-app.start = function() {
+app.start = function () {
   // start the web server
-  return app.listen(function() {
+  app.neo4j.initialize()
+  return app.listen(function () {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
@@ -20,7 +23,7 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
+boot(app, __dirname, function (err) {
   if (err) throw err;
 
   // start the server if `$ node server.js`

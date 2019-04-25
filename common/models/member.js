@@ -1,5 +1,5 @@
 'use strict';
-
-module.exports = function(Member) {
-
-};
+const createMemberOnGraph = require('../../methods/create.member.on.graph')
+module.exports = function (Member) {
+  createMemberOnGraph(Member)
+}

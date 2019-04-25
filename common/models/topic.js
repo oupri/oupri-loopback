@@ -12,7 +12,7 @@ module.exports = function (Topic) {
     */
     readTopicsFromFile()
       .then(function (topics) {
-        createTopicInstances(Topic, topics)
+        return createTopicInstances(Topic, topics)
       })
       .then(function () {
         cb(null, 'Synced... ');

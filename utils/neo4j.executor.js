@@ -11,7 +11,7 @@ module.exports = function (uri, user, password) {
       session = driver.session()
     },
     execute: function (query_id, json) {
-      console.log('Executing Query ' + query)
+      console.log('Executing Query ' + query_id)
       console.log('with json ', json)
       return resultPromise = session.run(queries[query_id], json)
 

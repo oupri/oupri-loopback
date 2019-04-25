@@ -3,7 +3,7 @@ module.exports = function (Member) {
     if (ctx.isNewInstance) {
       //create member on graph database and then call next
       console.log('created member instance ', ctx.instance)
-      Member.app.neo4j.execute('create_member_query', {
+      Member.app.neo4j.execute('create_member', {
         alias: ctx.instance.alias
       }).then(function () {
         console.log('created member on graph')

@@ -486,7 +486,6 @@
 /Real Estate/Real Estate Listings/Residential Sales
 /Real Estate/Real Estate Listings/Timeshares & Vacation Properties
 /Real Estate/Real Estate Services
-
 /Reference
 /Reference/Directories & Listings
 /Reference/Directories & Listings/Business & Personal Listings

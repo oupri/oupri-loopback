@@ -1,15 +1,30 @@
 module.exports = function (Topic) {
-  Topic.observe('after save', function (ctx, next) {
+  Topic.observe('before save', function (ctx, next) {
     var topic = ctx.instance
+    console.log('topic instance ', topic)
+    var promise_result = null
     if (!topic.synced) {
-      next()
-      //   console.log('created topic instance ', ctx.instance)
-      //   Member.app.neo4j.execute('create_topic_query', {
-      //     alias: ctx.instance.alias
-      //   }).then(function () {
-      //     console.log('created member on graph')
-      //     next()
-      //   })
+      if (topic.level == 1) {
+        promise_result = Topic.app.neo4j.execute('create_topic', {
+          path: topic.path,
+          title: topic.title
+        })
+      } else {
+        console.log('topic path - ', topic.path)
+        var parent_path = topic.path.slice(0, topic.path.length - topic.title.length - 1)
+        console.log('topic path ', topic.path, ' parent_path ', parent_path)
+        promise_result = Topic.app.neo4j.execute('create_and_connect_topic', {
+          path: topic.path,
+          title: topic.title,
+          parent_path: parent_path
+        })
+      }
+      promise_result.then(function () {
+        ctx.instance.synced = true
+        next()
+      }).catch(function (err) {
+        next(err)
+      })
     } else {
       next()
     }
